@@ -17,6 +17,27 @@
             <a href="../pages/links.html">ENLACES</a>
         </nav>
     </header>
+    <main class="weatherContainer">
+        <div class="infoContainer">
+          <div class="weatherActual" id="weatherActual">
+            <h2 id="Ciudad">....</h2>
+            <p id="descripcion">....</p>
+
+            <div class="datosContainer">
+                <div class="gradosActuales">
+                    <img id="estadoIcono" class="estadoIcono" src="" alt="">
+
+                    <div class="grados">
+                        <span id="temperatura">....</span>
+                        <img src="../assets/img/celsius.png" alt="gradosCelsius">
+                    </div>
+                </div>
+                <ul id="masDatos" class="masDatos"></ul>
+            </div>
+         </div>
+        <ul class="pronosticoWeather" id="pronosticoWeather"></ul>
+    </div>
+    </main>
 
     <script src="../js/clima.js"></script>
 </body>

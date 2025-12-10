@@ -78,3 +78,44 @@ header {
   align-items: center;
   margin: 30px;
 }
+
+.weatherContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.infoContainer{
+  width: 500px;
+  height: 250px;
+  background-color: brown;
+}
+
+.weatherActual{
+  
+  background-color: burlywood;
+}
+
+.datosContainer{
+  display: flex;
+  height: 90px;
+  background-color: darkgrey;
+}
+
+.gradosActuales{
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  background-color: bisque;
+}
+
+.estadoIcono{
+  width: 40px;
+  height: 40px;
+}
+
+
+.grados img{
+  width: 40px;
+  height: 40px;
+}
