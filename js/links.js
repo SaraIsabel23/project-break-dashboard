@@ -35,6 +35,21 @@ function añadirLink(){
     pintarLinks()
 }
 
+function eliminarLink(indice){
+    const linksGuardados = localStorage.getItem("arrayLinks");
+
+    if(linksGuardados === null)
+        return;
+
+    const arrayLinks = JSON.parse(linksGuardados);
+    arrayLinks.splice(indice, 1);
+
+    localStorage.setItem("arrayLinks", JSON.stringify(arrayLinks));
+
+    pintarLinks();
+}
+
+
 function pintarLinks(){
     lista.innerHTML = "";
     const datosGuardados = localStorage.getItem("arrayLinks");
@@ -44,15 +59,27 @@ function pintarLinks(){
 
     const arrayLinks = JSON.parse(datosGuardados);
 
-    for(const link of arrayLinks){
-        const li = document.createElement("li");
-        const a  = document.createElement("a");
+    for(let i = 0; i < arrayLinks.length; i++){
+        const link = arrayLinks[i];
+
+        const li   = document.createElement("li");
+        const a    = document.createElement("a");
+        const btnX = document.createElement("button");
 
         a.textContent = link.nombre;
         a.href        = link.url;
+        a.target      = "_blank";
+
+        btnX.textContent = "x";
+        btnX.className   = "boton-eliminar";
+        btnX.addEventListener("click", function(){
+            eliminarLink(i);
+        });
 
         li.appendChild(a);
+        li.appendChild(btnX);
         lista.appendChild(li);
+
     }
 
 }
@@ -61,6 +88,4 @@ function pintarLinks(){
 botonAñadir.addEventListener("click", añadirLink);
 pintarLinks()
 
-//ME FALTA PONERLE EL BOTON DE ELIMINAR A LOS ENLACES. 
-//ESTOY SATURADA, SIGO MAÑANA
 

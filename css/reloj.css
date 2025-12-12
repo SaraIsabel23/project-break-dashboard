@@ -85,15 +85,34 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 300px;
-  height: 150px;
+  height: 200px;
   margin: auto;
-  background-color: rgba(205, 92, 92, 0.379);
+  background-color:rgba(154, 136, 136, 0.119)
 }
 
 /* Contenido interno */
 .reloj-digital {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  
+}
+
+h1{
+  font-size: 20px;
+}
+
+.hora{
+  font-size: 50px;
+}
+
+.fecha{
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.mensaje{
+  font-size: 20px;
 }

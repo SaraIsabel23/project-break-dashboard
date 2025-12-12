@@ -1,11 +1,4 @@
 
-
-/*
-fetch("https://api.weatherapi.com/v1/current.json?key=7d32a4a5cb3a469f9e5182224251012&q=Madrid&aqi=no")
-.then(response => response.json())
-.then(data => console.log(data))
-*/
-
 const ciudad      = document.getElementById("ciudad");
 const descripcion = document.getElementById("descripcion");
 const estadoIcono = document.getElementById("estadoIcono");
@@ -50,39 +43,20 @@ async function traerClima(){
             const { time, condition, temp_c} = prevision;
 
             const li = document.createElement("li");
+            li.classList.add("previsionGrados");
+
+            const soloHora = time.split(" ")[1]; 
             const template = `
-            <span>${time}</span>
-            <span><img class="iconoWeather" src=${condition.icon} alt=${condition.text}>
+            <span>${soloHora}</span>
+            <span><img class="iconoWeather" src="${condition.icon}" alt="${condition.text}">
             <p>${temp_c}</p>
             </span>
             `
 
             li.innerHTML = template;
 
-            pronostico.appendChild(li);
-
-    
-            
+            pronostico.appendChild(li);  
         }
-
-
-        /*   for (const producto of productos) {
-      const { title, price, image } = producto
-      const li = document.createElement("li")
-      const template = `
-        <img src="${image}" alt="${title}" />
-        <div>
-          <strong>${title}</strong>
-          <p>${price}</p>
-        </div>
-      `
-      li.innerHTML = template
-
-      listaProductos.appendChild(li)
-    }*/
-
-
-
 
     }catch(error){
         console.log("Error al obtener datos:", error);
@@ -92,14 +66,3 @@ async function traerClima(){
 traerClima();
 
 
-//ciudad location.name , pais location.country
-//descripcion current.condition.text
-//estadoIcono current.condition.icon
-//temperatura current.temp_c
-//masDatos : precipitaciones current.precip_in   humedad current.humidity    viento current.wind_kph
-//pronostico forecast.forecastday[0].hour   array 24
-
-/*
-fetch("https://api.weatherapi.com/v1/forecast.json?key=7d32a4a5cb3a469f9e5182224251012&q=Madrid&aqi=no")
-.then(response => response.json())
-.then(data => console.log(data))*/
