@@ -43,14 +43,6 @@ table {
 	border-spacing: 0;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 30px;
-
-}
-
 .inicio{
     text-decoration: none;
 }
@@ -60,6 +52,11 @@ header{
     padding: 10px;
 
 }
+a{
+  color:white;
+  font-weight: bold;
+  padding: 10px;
+}
 
 
 html, body {
@@ -67,8 +64,14 @@ html, body {
 }
 
 body {
+  font-family: Arial, sans-serif;
+  color: white;
   display: flex;
   flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
 }
 
 /* Header */
@@ -76,7 +79,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px;
+  margin: 0;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color:rgba(67, 65, 65, 0.434);
 }
 
 .weatherContainer{
@@ -90,12 +97,9 @@ header {
   width: 400px;
   height: 250px;
   padding: 15px;
-  background-color:rgba(154, 136, 136, 0.119)
+  background-color:rgba(67, 65, 65, 0.434)
 }
 
-.weatherActual{
-  
-}
 
 #ciudad{
   font-size: 23px;
@@ -104,12 +108,13 @@ header {
 
 #descripcion{
   font-size: 20px;
+  color:bisque;
 }
 
 .datosContainer{
   display: flex;
+  justify-content: center;
   height: 90px;
-  /*background-color: darkgrey;*/
 }
 
 .gradosActuales{
@@ -117,7 +122,7 @@ header {
   justify-content:space-between;
   align-items: center;
   width: 200px;
- /* background-color: bisque;*/
+
 }
 
 #temperatura{
@@ -134,28 +139,40 @@ header {
   justify-content: center;
 }
 .grados img{
-  width: 60px;
-  height: 60px;
+  padding-top: 3px;
+  width: 44px;
+  height: 44px;
+  filter:invert(1);
+  mix-blend-mode:screen;
 }
 
 .masDatos{
-  padding-top: 10px;
-  padding-left: 20px;
+  width: 200px;
+  padding-top: 22.5px;
+  padding-left: 35px;
 }
+
+.masDatos li{
+  font-size: 13px;
+  padding: 0.8px;
+  color:cornsilk;
+
+}
+
 
 .pronosticoWeather {
     display: flex;
     align-items: center;
-    overflow-x: auto;           /* Permite scroll horizontal */
-    overflow-y: hidden;         /* Oculta scroll vertical */
-    gap: 1rem;                  /* Espacio entre elementos */
+    overflow-x: auto;           
+    overflow-y: hidden;         
+    gap: 1rem;                  
     padding: 1rem 0;
     list-style: none;
 }
 
 .previsionGrados {
-    flex-shrink: 0;             /* Evita que se compriman */
-    min-width: 80px;            /* Ancho mínimo de cada item */
+    flex-shrink: 0;             
+    min-width: 80px;           
     display: flex;
     flex-direction: column;
     align-items: center;

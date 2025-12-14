@@ -33,4 +33,4 @@ function imagenAleatoria(){
 }
 
 imagenAleatoria();
-setInterval(imagenAleatoria, 15000);
+setInterval(imagenAleatoria, 10000);

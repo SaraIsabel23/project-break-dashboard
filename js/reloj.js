@@ -55,6 +55,8 @@ function actualizarFecha(){
 
 
 function actualizarMensaje(){
+    if(!mensaje) return;
+    
     const getHora = new Date();
 
     const horaActual = getHora.getHours();

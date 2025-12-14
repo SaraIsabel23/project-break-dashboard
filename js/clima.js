@@ -30,9 +30,9 @@ async function traerClima(){
 
 
         masDatos.innerHTML      = `
-        <li>Precipitaciones: ${lluvias}</li>
-        <li>Humedad: ${humedad}</li>
-        <li>Viento: ${vient}</li>`
+        <li>Precipitaciones: ${lluvias}%</li>
+        <li>Humedad: ${humedad}%</li>
+        <li>Viento: ${vient}Km/h</li>`
 
 
 
@@ -49,7 +49,7 @@ async function traerClima(){
             const template = `
             <span>${soloHora}</span>
             <span><img class="iconoWeather" src="${condition.icon}" alt="${condition.text}">
-            <p>${temp_c}</p>
+            <p>${temp_c}ºC</p>
             </span>
             `
 

@@ -43,21 +43,13 @@ table {
 	border-spacing: 0;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 30px;
-
-}
-
 .inicio{
-    text-decoration: none;
+  text-decoration: none;
 }
 .menu a{
-    justify-content: flex-end;
-    text-decoration: none;
-    padding: 10px;
+  justify-content: flex-end;
+  text-decoration: none;
+  padding: 10px;
 
 }
 
@@ -67,19 +59,36 @@ html, body {
 }
 
 body {
+  font-family: Arial, sans-serif;
+  color: white;
   display: flex;
   flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
 }
+
 
 /* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px;
+  margin: 0;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color:rgba(67, 65, 65, 0.434);
 }
 
-/* Main centrado */
+a{
+  color:white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+
 .main {
   display: flex;
   flex-direction: column;
@@ -89,10 +98,10 @@ header {
   width: 300px;
   height: 200px;
   margin: auto;
-  background-color:rgba(154, 136, 136, 0.119)
+  background-color:rgba(67, 65, 65, 0.434)
 }
 
-/* Contenido interno */
+
 .reloj-digital {
   text-align: center;
   padding: 30px;
@@ -101,6 +110,7 @@ header {
 
 h1{
   font-size: 20px;
+  padding-bottom: 10px;
 }
 
 .hora{

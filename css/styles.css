@@ -1,7 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -50,40 +46,61 @@ table {
 /*MIS CSS*/
 
 body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color:white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
 }
 
-/* Layout principal con Grid */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  height: 60px;
+  padding-left: 30px;
+  background-color:rgba(67, 65, 65, 0.434);
+
+}
+
+.inicio{
+  text-decoration: none;
+}
+.menu a{
+  justify-content: flex-end;
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  padding: 10px;
+    
+
+}
+
+
 
 .principal {
    display: grid;
    grid-template-columns: 1fr 2fr 1fr;
    gap:2rem;
-   padding: 0 2rem 2rem 2rem;
+   padding: 18px 20px 20px 20px;
    max-width: 1400px;
    margin: 0 auto;
 
 }
 
-  
-
-/* Posicionamiento de secciones */
 
 .weatherContainer {
   grid-column: 1;
   grid-row: 1 / 3;
 }
 
-  
 
 .main {
   grid-column: 2;
   grid-row: 1;
 }
-
-  
 
 .mainP {
   grid-column: 2;
@@ -91,7 +108,6 @@ body {
 }
 
   
-
 .mainL {
   grid-column: 3;
   grid-row: 1 / 3;
@@ -103,17 +119,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding-top: 14px;
 }
 .infoContainer{
   border-radius: 10px;
   width: 400px;
   height: 250px;
   padding: 15px;
-  background-color:rgba(154, 136, 136, 0.119)
-}
-
-.weatherActual{
-  
+  background-color:rgba(67, 65, 65, 0.434)
 }
 
 #ciudad{
@@ -123,12 +136,13 @@ body {
 
 #descripcion{
   font-size: 20px;
+  color:bisque;
 }
 
 .datosContainer{
   display: flex;
   height: 90px;
-  /*background-color: darkgrey;*/
+  
 }
 
 .gradosActuales{
@@ -136,7 +150,7 @@ body {
   justify-content:space-between;
   align-items: center;
   width: 200px;
- /* background-color: bisque;*/
+ 
 }
 
 #temperatura{
@@ -153,28 +167,40 @@ body {
   justify-content: center;
 }
 .grados img{
-  width: 60px;
-  height: 60px;
+  padding-top: 3px;
+  width: 44px;
+  height: 44px;
+  filter:invert(1);
+  mix-blend-mode:screen;
 }
 
 .masDatos{
-  padding-top: 10px;
-  padding-left: 20px;
+  width: 200px;
+  padding-top: 22.5px;
+  padding-left: 35px;
 }
+
+.masDatos li{
+  font-size: 13px;
+  padding: 0.8px;
+  color:cornsilk;
+
+}
+
 
 .pronosticoWeather {
     display: flex;
     align-items: center;
-    overflow-x: auto;           /* Permite scroll horizontal */
-    overflow-y: hidden;         /* Oculta scroll vertical */
-    gap: 1rem;                  /* Espacio entre elementos */
+    overflow-x: auto;         
+    overflow-y: hidden;         
+    gap: 1rem;                  
     padding: 1rem 0;
     list-style: none;
 }
 
 .previsionGrados {
-    flex-shrink: 0;             /* Evita que se compriman */
-    min-width: 80px;            /* Ancho mínimo de cada item */
+    flex-shrink: 0;             
+    min-width: 80px;            
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,9 +220,14 @@ body {
   align-items: center;
 
 }
+
 .list{
   width: 300px;
-  height: 500px;
+  height: 530px;
+  background-color:rgba(67, 65, 65, 0.434);
+  border-radius: 10px;
+  padding:10px;
+  
 }
 
 .list .input-container{
@@ -208,12 +239,12 @@ body {
 }
 
 .links-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    height: 300px;
-    padding: 20px;
-    overflow: scroll;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: 300px;
+  padding: 20px;
+  overflow: scroll;
 }
 
 .title {
@@ -224,73 +255,122 @@ body {
   text-align: center;
   margin-bottom: 10px;
   gap: 5px;
+  padding-left: 8px;
 }
 
 .title img{
   width: 30px;
   height: 30px;
+  filter:invert(1);
+  mix-blend-mode:screen;
+}
+
+#name-input, #url-input{
+  padding-left: 10px;
 }
 
 .input-container input,
 .input-container button {
   width: 100%;
   height: 40px;
-  box-sizing: border-box; /* opcional pero recomendado */
-  margin-bottom: 5px;    /* separación para que no queden pegados */
+  box-sizing: border-box;
+  margin-bottom: 5px;    
   border-radius: 10px;
-
+  border-style: none;
 }
 
 .input-container button{
   margin-top: 20px;
   cursor: pointer;
+  background-color: rgb(49, 129, 233);
+  color:white;
+}
+
+.input-container button:hover{
+  background-color: rgb(22, 111, 226);
+}
+
+.links-container li a{
+  color: white;
+  font-size: bold;
+  text-decoration: none;
+
+}
+.boton-eliminar{
+  background-color:rgba(67, 65, 65, 0.434);
+  color: white;
+  border-style: none;
+  cursor: pointer;
+
 }
 
 /*CSS PASSWORDS*/
 
 .contenedor {
   display: flex;
-  flex-direction: column;   /* título arriba, controles abajo */
+  flex-direction: column;  
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 0;
+  margin-bottom: 100px;
+  height: 280px;
 }
 
-/* --- Título centrado --- */
+
 .titulo {
   display: flex;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   margin-bottom: 30px;
-  gap: 5px;
+  gap: 8px;
+  padding: 10px;
+  width: 340px;
+  border-radius: 10px;
+  background-color: rgba(67, 65, 65, 0.434);
 }
 
-/* --- Controles en línea y centrados --- */
+
 .containerPassword {
   display: flex;
-  flex-direction: column; /* <--- Esto pone el label arriba */
+  flex-direction: column;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 10px;
   width: 300px;
   height: 150px;
-  gap: 15px;
+  gap: 20px;
   padding: 30px;
-  background-color:rgba(154, 136, 136, 0.119)
+  background-color:rgba(67, 65, 65, 0.434)
 }
 
-/* Input */
+.containerPassword label{
+  font-size: 17px;
+}
+
+
+
 #length {
   width: 60px;
   height: 25px;
+  border-radius: 10px;
+  border-style: none;
 }
 
-/* Botón */
+
 #getPassword {
   height: 35px;
   padding: 0 10px;
+  color: white;
+  background-color: rgb(49, 129, 233);
+  border-radius: 10px;
+  border-style: none;
+  cursor: pointer;
 }
 
-/* Resultado */
+#getPassword:hover{
+  background-color: rgb(22, 111, 226);
+}
+
+
 .resultPassword {
   margin-top: 20px;
   font-size: 20px;
@@ -302,6 +382,8 @@ body {
 .titulo img{
   width: 30px;
   height: 30px;
+  filter:invert(1);
+  mix-blend-mode:screen;
 }
 
 /*CSS RELOJ*/
@@ -315,10 +397,9 @@ body {
   width: 200px;
   height: 100px;
   margin: auto;
-  background-color:rgba(154, 136, 136, 0.119)
 }
 
-/* Contenido interno */
+
 .reloj-digital {
   text-align: center;
   padding: 30px;
@@ -327,14 +408,16 @@ body {
 
 h1{
   font-size: 20px;
+  padding-bottom: 10px;
 }
 
 .hora{
-  font-size: 50px;
+  font-size: 80px;
+
 }
 
 .fecha{
-  font-size: 20px;
+  font-size: 40px;
   padding-top: 5px;
   padding-bottom: 15px;
 }
